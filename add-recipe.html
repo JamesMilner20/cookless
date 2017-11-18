@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CookLess with DevLess</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="container d-flex justify-content-between">
+        <a href="index.html" class="navbar-brand text-muted">CookLess</a>
+        <a href="#" class="btn btn-success">Submit Recipe</a>
+    </div>
+</div>
+
+<section id="addRecipe">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 my-5">
+        <h2 class="my-4">Add new Recipe</h2>
+        <div class="dv-notify-success">Recipe Added Successfully</div>
+        <div class="dv-notify-failed">Recipe not added</div>
+        <form class="dv-add-oneto:CookLess:recipes" enctype="multipart/form-data">
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Recipe Title:</label>
+              <input name="title" type="text" class="form-control">
+              <p class="help-block"></p>
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Short Description:</label>
+              <input name="description" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Choose Category:</label>
+              <select name="category" class="form-control">
+                <option value="">=== Select Recipe Category ===</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Supper">Supper</option>
+                <option value="Soups">Soups</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Recipe Details:</label>
+              <textarea name="details" rows="10" cols="100" class="form-control" maxlength="999" style="resize:none"></textarea>
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <label>Upload Image</label>
+            <input name="image" type="file" class="form-control-file">
+          </div>
+          <button type="text" class="btn btn-primary">Add Recipe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-muted pt-4 pb-2">
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <p>&copy; DevLess BaaS</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://cooklessmilner.herokuapp.com/js/devless-sdk.js" class="devless-connection" devless-con-token="9d645cdd95a1a0cf545b33b50f0456e5"  ></script>
+</body>
+</html>
